@@ -10,6 +10,12 @@ export default class Test extends Service {
    * @param name - your name
    */
   public async sayHi(name: string) {
-    return `hi, ${name}`;
+    return new Promise((resolve) => {
+      setTimeout(()=>{resolve(`hi, ${name}`)}, 100);
+    });
+  }
+  public async getApex() {
+    var result = await this.app.mongo.db.collection('APEX').find();
+    return result
   }
 }
