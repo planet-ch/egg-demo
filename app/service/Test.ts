@@ -15,7 +15,7 @@ export default class Test extends Service {
     });
   }
   public async getApex() {
-    var result = await this.app.mongo.db.collection('APEX').find();
+    var result = await this.app.mongo.find('APEX');
     return result
   }
 }
