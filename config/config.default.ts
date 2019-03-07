@@ -18,6 +18,9 @@ export default (appInfo: EggAppInfo) => {
     origin: '*', // 访问白名单,根据你自己的需要进行设置
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   };
+  config.security = {
+    csrf: false,
+  };
   config.mongo = {
     client: {
       host: "127.0.0.1",
