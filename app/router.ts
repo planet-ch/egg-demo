@@ -6,4 +6,5 @@ export default (app: Application) => {
   router.get('/', controller.home.index);
   router.get('/jinseyun', controller.jinseyun.jinseyun);
   router.get('/getData', controller.getApex.getApex);
+  router.post('/addProduct', controller.addProduct.addProduct);
 };
